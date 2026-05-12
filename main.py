@@ -29,4 +29,8 @@ def user_input_letter():
             continue
         return user_letter
 
-# def check_letter_in_word(user_letter : str, comp_choice : list):
+
+def check_letter_in_word(user_letter : str, comp_choice : list):
+    if user_letter in comp_choice:
+        return True
+    return False
