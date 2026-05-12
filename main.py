@@ -13,4 +13,13 @@ def computer_choose_rand_word():
     ]
     return list(random.choice(words))
 
-print(computer_choose_rand_word())
+def user_input_letter():
+    while True:
+        user_letter = input("Enter a letter: ").lower()
+        if len(user_letter) > 1:
+            print("You can enter only one char.")
+            continue
+        if not user_letter.isalpha():
+            print("You can enter only a letter.")
+            continue
+        return user_letter
