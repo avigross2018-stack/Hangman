@@ -13,6 +13,11 @@ def computer_choose_rand_word():
     ]
     return list(random.choice(words))
 
+
+def encrypt_word(comp_choice : list):
+    return ["X" for w in comp_choice]
+
+
 def user_input_letter():
     while True:
         user_letter = input("Enter a letter: ").lower()
@@ -23,3 +28,5 @@ def user_input_letter():
             print("You can enter only a letter.")
             continue
         return user_letter
+
+# def check_letter_in_word(user_letter : str, comp_choice : list):
