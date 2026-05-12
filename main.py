@@ -11,6 +11,6 @@ def computer_choose_rand_word():
     "satellite", "umbrella", "volcano", "jazz", "rhythm", "oxygen", 
     "queue", "sphinx", "whizz", "zigzag", "awkward"
     ]
-    return random.choice(words).split()
+    return list(random.choice(words))
 
 print(computer_choose_rand_word())
