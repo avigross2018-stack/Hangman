@@ -60,7 +60,7 @@ def main():
         print("".join(enc_word))
         print("==========")
         print(MAX_ROUNDS - rounds_counter, "Rounds left")
-        print("Letter that you gusset", user_letters)
+        print("Letters that you gusset", user_letters)
 
         user_letter = user_input_letter(user_letters)
         user_letters.append(user_letter)
