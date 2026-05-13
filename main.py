@@ -4,14 +4,17 @@ import words
 MAX_ROUNDS = 5
 
 def computer_choose_rand_word():
+    '''return random word from list'''
     return list(random.choice(words.words))
 
 
 def encrypt_word(comp_choice : list):
+    '''return encrypted word'''
     return ["#" for w in comp_choice]
 
 
 def user_input_letter(user_letters : list):
+    '''validate user input'''
     while True:
         user_letter = input("Enter a letter: ").lower()
         if len(user_letter) > 1:
@@ -33,6 +36,7 @@ def check_letter_in_word(user_letter : str, comp_choice : list):
 
 
 def insert_letter_to_word(user_letter : str, comp_choice : list, enc_word : list):
+    '''replace the encrypt letter with the correct letter'''
     for i,l in enumerate(comp_choice):
         if user_letter == l:
             enc_word[i] = user_letter
@@ -51,7 +55,7 @@ def main():
     enc_word = encrypt_word(comp_choice)
     rounds_counter = 0
     user_letters = []
-    
+
     while rounds_counter < MAX_ROUNDS:
         print("".join(enc_word))
         print("==========")
