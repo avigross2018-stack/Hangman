@@ -55,13 +55,14 @@ def check_if_completed_word(enc_word : list):
 
 
 def main():
+    print("=== HangMan ===")
     comp_choice = computer_choose_rand_word()
     enc_word = encrypt_word(comp_choice)
     rounds_counter = 0
     user_letters = []
     while rounds_counter < MAX_ROUNDS:
         print(MAX_ROUNDS - rounds_counter, "Rounds left")
-        print(enc_word)
+        print("".join(enc_word))
         print("Letter that you gusset", user_letters)
         user_letter = user_input_letter(user_letters)
         user_letters.append(user_letter)
@@ -74,10 +75,10 @@ def main():
             continue
         if check_if_completed_word(enc_word):
             print(f"You Won. \nThe word is **{"".join(enc_word)}**")
-            break
-    print("No more rounds. You lose...")
-
-
+            return
         
+    print(f"No more rounds. Game over... \nThe word was **{"".join(comp_choice)}**")
 
-main()
+
+if __name__ == "__main__":       
+    main()
