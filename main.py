@@ -67,17 +67,17 @@ def main():
 
         if check_letter_in_word(user_letter, comp_choice):
             enc_word = insert_letter_to_word(user_letter, comp_choice, enc_word)
-            print("The letter in the word.")
+            print("✅ The letter in the word.")
         else:
             rounds_counter += 1
-            print("The letter does not exist in the word, Try again")
+            print("❌ The letter does not exist in the word, Try again")
             continue
 
         if check_if_completed_word(enc_word):
-            print(f"You Won. \nThe word is **{"".join(enc_word)}**")
+            print(f"🎉 You Won. 🎉\nThe word is **{"".join(enc_word)}**")
             return
         
-    print(f"No more rounds. Game over... \nThe word was **{"".join(comp_choice)}**")
+    print(f"No more rounds.😞 Game over... 😞\nThe word was **{"".join(comp_choice)}**")
 
 
 if __name__ == "__main__":       
